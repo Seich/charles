@@ -4,13 +4,6 @@
 
 var charles;
 (function (charles) {
-  charles.build = (function () {
-    function build(fields, methods) {
-
-    }
-
-    return build;
-  }());
   charles.events = (function () {
     function events() {
       this.events = {};
@@ -112,4 +105,4 @@ var charles;
 
     return observe;
   }());
-}()); //hi
+}(charles || (charles = {})));

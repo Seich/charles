@@ -30,7 +30,7 @@ module.exports = function(grunt) {
     },
     watch: {
       files: '<config:lint.files>',
-      tasks: 'lint test'
+      tasks: 'lint concat min beautify shell'
     },
     jshint: {
       options: {
@@ -48,13 +48,20 @@ module.exports = function(grunt) {
       globals: {
         exports: true,
         module: false,
-        charles: true
+        charles: true,
+        console: true
       }
     },
-    uglify: {}
+    uglify: {},
+    shell: {
+      build_copy: {
+        command: 'cp dist/charles.js ../lchat/frontend/js/libs/charles.js'
+      }
+    }
   });
 
   grunt.loadNpmTasks('grunt-beautify');
+  grunt.loadNpmTasks('grunt-shell');
 
   // Default task.
   grunt.registerTask('default', 'lint concat min beautify');

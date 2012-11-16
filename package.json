@@ -33,6 +33,7 @@
   },
   "keywords": [],
   "dependencies": {
-    "grunt-beautify": "~0.1.0"
+    "grunt-beautify": "~0.1.0",
+    "grunt-shell": "~0.1.3"
   }
 }
