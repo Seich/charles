@@ -1,0 +1,38 @@
+{
+  "name": "charles",
+  "description": "Simple Javascript utility library",
+  "version": "0.1.0",
+  "homepage": "https://github.com/seich/charles",
+  "author": {
+    "name": "Sergio Diaz",
+    "email": "seich@martianwabbit.com",
+    "url": "http://www.martianwabbit.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/seich/charles.git"
+  },
+  "bugs": {
+    "url": "https://github.com/seich/charles/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/seich/charles/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "lib/charles",
+  "engines": {
+    "node": "*"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt": "~0.3.17"
+  },
+  "keywords": [],
+  "dependencies": {
+    "grunt-beautify": "~0.1.0"
+  }
+}
