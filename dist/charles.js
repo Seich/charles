@@ -60,7 +60,7 @@ var charles;
   }());
   charles.observe = (function () {
     function observe(obj) {
-      this.obj = obj;
+      this.obj = obj || {};
       this.events = new charles.events();
     }
 
