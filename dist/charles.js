@@ -1,9 +1,21 @@
-/*! charles - v0.1.0 - 2012-11-16
+/*! charles - v0.1.0 - 2012-11-17
 * https://github.com/seich/charles
 * Copyright (c) 2012 Sergio Diaz; Licensed MIT */
 
 var charles;
 (function (charles) {
+  charles.build = (function () {
+    function build(child) {
+      var Class = function () {};
+
+      if ("private" in child) {
+        console.log(1);
+      }
+
+    }
+
+    return build;
+  })();
   charles.events = (function () {
     function events() {
       this.events = {};
@@ -65,6 +77,10 @@ var charles;
     }
 
     observe.prototype.attr = function (attr, value) {
+      if (typeof value === "undefined") {
+        return this.obj[attr];
+      }
+
       var newValue = value;
       var oldValue = this.obj[attr];
 
